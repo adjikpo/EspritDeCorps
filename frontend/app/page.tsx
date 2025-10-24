@@ -97,6 +97,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Compétences */}
+      <Skills />
+
+      {/* Section Comment ça marche */}
+      <HowItWorks />
+
+      {/* Bandeau Service à la Personne */}
+      <SAPBanner />
+
       {/* Section Témoignages */}
       <Testimonials testimonials={mockTestimonials} />
 

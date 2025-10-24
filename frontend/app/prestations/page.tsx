@@ -153,14 +153,14 @@ export default function PrestationsPage() {
       <section className="section-container bg-neutral-100">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-neutral-900 mb-4">
-            Vous hésitez sur la formule ?
+            Tarifs personnalisés selon vos objectifs
           </h2>
           <p className="text-neutral-600 text-lg mb-8">
-            Contactez-nous pour un échange gratuit et sans engagement. 
-            Nous vous aiderons à choisir la meilleure option selon vos besoins.
+            Chaque prestation est unique et adaptée à votre profil. Contactez-nous pour 
+            établir ensemble un devis personnalisé correspondant exactement à vos besoins.
           </p>
           <Link href="/contact">
-            <Button size="lg">Demander un conseil</Button>
+            <Button size="lg">Demander un devis gratuit</Button>
           </Link>
         </div>
       </section>

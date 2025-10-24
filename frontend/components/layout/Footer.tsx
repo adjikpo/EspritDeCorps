@@ -10,9 +10,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Colonne 1: À propos */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              <span className="text-primary">Esprit</span> de Corps
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/assets/logo-circle.png" 
+                alt="Esprit de Corps" 
+                className="h-12 w-12 object-contain"
+              />
+              <h3 className="text-xl font-bold">
+                <span className="text-primary">Esprit</span> de Corps
+              </h3>
+            </div>
             <p className="text-neutral-400 text-sm leading-relaxed">
               Coaching sportif professionnel pour particuliers et entreprises. 
               Atteignez vos objectifs avec un accompagnement personnalisé.
