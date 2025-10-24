@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -20,9 +21,16 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="relative h-12 w-12">
+          {/* Logo avec animation hover */}
+          <Link href="/" className="flex items-center space-x-3 group">
+            <motion.div 
+              className="relative h-12 w-12"
+              whileHover={{ 
+                scale: 1.1,
+                filter: "drop-shadow(0 0 12px rgba(221, 51, 51, 0.5))"
+              }}
+              transition={{ duration: 0.2 }}
+            >
               <Image 
                 src="/assets/logo-circle.png" 
                 alt="Esprit de Corps" 
@@ -30,7 +38,7 @@ export default function Header() {
                 className="object-contain"
                 priority
               />
-            </div>
+            </motion.div>
             <div className="text-xl font-bold hidden sm:block">
               <span className="text-primary">Esprit</span>
               <span className="text-neutral-900"> de Corps</span>

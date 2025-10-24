@@ -140,7 +140,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button size="lg" className="bg-white text-primary hover:bg-neutral-100">
-                Réserver une séance
+                Réserve ta séance
               </Button>
             </Link>
             <Link href="/prestations">

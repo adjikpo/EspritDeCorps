@@ -1,24 +1,55 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <footer className="bg-neutral-900 text-white">
+    <footer className="bg-neutral-900 text-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Colonne 1: À propos */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Image 
-                src="/assets/logo-circle.png" 
-                alt="Esprit de Corps" 
-                width={48}
-                height={48}
-                className="object-contain flex-shrink-0"
-              />
+              {/* Logo avec animation au scroll */}
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <motion.div
+                  animate={isInView ? {
+                    boxShadow: [
+                      "0 0 0px rgba(221, 51, 51, 0)",
+                      "0 0 20px rgba(221, 51, 51, 0.4)",
+                      "0 0 0px rgba(221, 51, 51, 0)"
+                    ]
+                  } : {}}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="rounded-full"
+                >
+                  <Image 
+                    src="/assets/logo-circle.png" 
+                    alt="Esprit de Corps" 
+                    width={48}
+                    height={48}
+                    className="object-contain flex-shrink-0"
+                  />
+                </motion.div>
+              </motion.div>
               <h3 className="text-xl font-bold">
                 <span className="text-primary">Esprit</span> de Corps
               </h3>

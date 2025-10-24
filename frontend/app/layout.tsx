@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import LogoLoader from '@/components/animations/LogoLoader'
+import ScrollToTop from '@/components/animations/ScrollToTop'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
@@ -24,11 +26,13 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="antialiased">
+        <LogoLoader />
         <Header />
         <main className="pt-20">
           {children}
         </main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   )
