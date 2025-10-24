@@ -60,6 +60,21 @@ export default function SAPBanner() {
                   </Button>
                 </Link>
               </div>
+
+              {/* Lien officiel SAP */}
+              <div className="mt-6 p-4 bg-accent-blue/5 border border-accent-blue/20 rounded-lg">
+                <p className="text-sm text-neutral-600">
+                  🔗 <strong>Information officielle :</strong> En savoir plus sur les avantages fiscaux des Services à la Personne sur{' '}
+                  <a 
+                    href="https://www.servicesalapersonne.gouv.fr" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent-blue hover:text-accent-blue-dark underline font-medium"
+                  >
+                    servicesalapersonne.gouv.fr
+                  </a>
+                </p>
+              </div>
             </div>
 
             {/* Visuel */}

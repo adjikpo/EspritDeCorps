@@ -94,7 +94,7 @@ export default function PrestationsPage() {
       {/* Liste des prestations */}
       <section className="section-container bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {prestations.map((prestation) => {
               const Icon = prestation.icon
               const colors = colorClasses[prestation.color as keyof typeof colorClasses]
