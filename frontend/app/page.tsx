@@ -1,5 +1,8 @@
 import Hero from '@/components/sections/Hero'
 import Testimonials from '@/components/sections/Testimonials'
+import Skills from '@/components/sections/Skills'
+import HowItWorks from '@/components/sections/HowItWorks'
+import SAPBanner from '@/components/sections/SAPBanner'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
 import Link from 'next/link'
@@ -52,6 +55,11 @@ export default function Home() {
             Chez Esprit de Corps, nous croyons que chaque personne mérite un accompagnement personnalisé
             pour atteindre ses objectifs sportifs et de bien-être. Notre approche combine expertise,
             motivation et résultats concrets.
+          </p>
+          <p className="text-neutral-700 text-base leading-relaxed mb-8 font-medium">
+            🎯 Toutes nos prestations sont <strong className="text-primary">sur-mesure</strong> et 
+            adaptées à vos besoins. Les tarifs sont établis après un premier échange pour 
+            définir ensemble votre programme personnalisé.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mt-12">
