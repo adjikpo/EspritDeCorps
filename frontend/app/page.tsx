@@ -116,41 +116,6 @@ export default function Home() {
 
       {/* Section Témoignages */}
       <Testimonials testimonials={mockTestimonials} />
-
-      {/* Section CTA avec fond dynamique */}
-      <section className="relative overflow-hidden py-20 md:py-32">
-        {/* Fond avec dégradé animé */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent-blue opacity-90"></div>
-        
-        {/* Pattern géométrique */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white rounded-full blur-3xl"></div>
-        </div>
-        
-        {/* Contenu */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
-            Prêt à commencer ?
-          </h2>
-          <p className="text-white/90 text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
-            Contactez-nous dès aujourd'hui pour une première séance découverte
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-neutral-100">
-                Réserve ta séance
-              </Button>
-            </Link>
-            <Link href="/prestations">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Découvrir nos offres
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

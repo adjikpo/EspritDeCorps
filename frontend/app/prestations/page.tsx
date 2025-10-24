@@ -17,7 +17,6 @@ const prestations = [
     icon: Dumbbell,
     color: 'primary',
     description: 'Un accompagnement 100% personnalisé pour atteindre vos objectifs en toute confiance.',
-    price: 'À partir de 60€',
     features: [
       'Bilan personnalisé complet',
       'Programme sur mesure',
@@ -32,10 +31,9 @@ const prestations = [
     icon: Users,
     color: 'secondary',
     description: 'Entraînez-vous en petits groupes dans une ambiance conviviale et motivante.',
-    price: 'À partir de 25€/pers',
     features: [
       'Groupes de 4-8 personnes',
-      'Esprit d\'équipe',
+      'Esprit d\'\u00e9quipe',
       'Tarifs avantageux',
       'Séances dynamiques',
       'Objectifs communs',
@@ -47,7 +45,6 @@ const prestations = [
     icon: Building2,
     color: 'accent-blue',
     description: 'Améliorez le bien-être de vos équipes avec des programmes dédiés aux entreprises.',
-    price: 'Sur devis',
     features: [
       'Team building sportif',
       'Séances sur site',
@@ -93,8 +90,8 @@ export default function PrestationsPage() {
 
       {/* Liste des prestations */}
       <section className="section-container bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {prestations.map((prestation) => {
               const Icon = prestation.icon
               const colors = colorClasses[prestation.color as keyof typeof colorClasses]
@@ -107,13 +104,10 @@ export default function PrestationsPage() {
                       <Icon className={`h-10 w-10 ${colors.text}`} />
                     </div>
 
-                    {/* Titre et prix */}
-                    <h2 className="text-2xl font-bold text-neutral-900 mb-2">
+                    {/* Titre */}
+                    <h2 className="text-2xl font-bold text-neutral-900 mb-4">
                       {prestation.title}
                     </h2>
-                    <p className={`text-xl font-semibold ${colors.text} mb-4`}>
-                      {prestation.price}
-                    </p>
 
                     {/* Description */}
                     <p className="text-neutral-600 mb-6 leading-relaxed">
