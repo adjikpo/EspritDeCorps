@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import des polices du site WordPress */
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ABeeZee'), url('/assets/fonts/ABeeZee-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ABeeZee Italic'), url('/assets/fonts/ABeeZee-Italic.ttf') format('truetype');
+}
+
+@layer base {
+  :root {
+    /* Variables CSS pour une cohérence avec le thème WordPress */
+    --color-primary: #dd3333;
+    --color-secondary: #0eb290;
+    --color-accent-blue: #387ebb;
+    --color-neutral-dark: #263036;
+    --color-neutral-text: #708e9f;
+    --color-neutral-bg: #f6f6f6;
+  }
+
+  * {
+    @apply border-neutral-200;
+  }
+
+  body {
+    @apply bg-white text-neutral-900 font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-section-title;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Bouton principal style WordPress */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-hover text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+  }
+
+  /* Card style WordPress */
+  .card {
+    @apply bg-white rounded-card shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20;
+  }
+
+  /* Hero section background gradient comme WordPress */
+  .hero-gradient {
+    @apply bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+}
