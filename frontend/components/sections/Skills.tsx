@@ -73,18 +73,23 @@ export default function Skills() {
           {skills.map((skill, index) => {
             const Icon = skill.icon
             return (
-              <Card key={index} className="p-6 text-center hover:scale-105 transition-transform">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <Icon className="h-8 w-8 text-primary" />
+              <Card 
+                key={index} 
+                className="p-6 text-center group cursor-default"
+              >
+                <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-2">
+                  <div className="flex justify-center mb-4">
+                    <div className="bg-gradient-to-br from-primary/20 to-primary/10 p-4 rounded-full group-hover:from-primary group-hover:to-primary-hover transition-all duration-300 shadow-md group-hover:shadow-lg">
+                      <Icon className="h-8 w-8 text-primary group-hover:text-white transition-colors duration-300" />
+                    </div>
                   </div>
+                  <h3 className="font-bold text-neutral-900 mb-2 group-hover:text-primary transition-colors">
+                    {skill.title}
+                  </h3>
+                  <p className="text-sm text-neutral-600">
+                    {skill.description}
+                  </p>
                 </div>
-                <h3 className="font-bold text-neutral-900 mb-2">
-                  {skill.title}
-                </h3>
-                <p className="text-sm text-neutral-600">
-                  {skill.description}
-                </p>
               </Card>
             )
           })}

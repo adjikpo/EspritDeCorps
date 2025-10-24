@@ -11,11 +11,14 @@ export default function Footer() {
           {/* Colonne 1: À propos */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/assets/logo-circle.png" 
-                alt="Esprit de Corps" 
-                className="h-12 w-12 object-contain"
-              />
+              <div className="relative h-12 w-12 flex-shrink-0">
+                <Image 
+                  src="/assets/logo-circle.png" 
+                  alt="Esprit de Corps" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <h3 className="text-xl font-bold">
                 <span className="text-primary">Esprit</span> de Corps
               </h3>

@@ -36,9 +36,20 @@ export default function Hero({
       }
     >
       <div className="text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
+        <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-bold mb-4 animate-fade-in">
           {title}
         </h1>
+        
+        {/* Citation d'accroche */}
+        <div className="mb-8 animate-fade-in animation-delay-200">
+          <p className="text-white/90 text-2xl md:text-3xl font-serif italic font-light tracking-wide">
+            &ldquo;Bien dans sa tête, bien dans son corps&rdquo;
+          </p>
+          <div className="flex justify-center mt-3">
+            <div className="h-0.5 w-32 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+          </div>
+        </div>
+        
         <p className="text-white text-xl md:text-2xl mb-8 text-neutral-300 max-w-2xl mx-auto animate-slide-up">
           {subtitle}
         </p>

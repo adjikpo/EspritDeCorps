@@ -21,11 +21,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <img 
-              src="/assets/logo-circle.png" 
-              alt="Esprit de Corps" 
-              className="h-12 w-12 object-contain"
-            />
+            <div className="relative h-12 w-12">
+              <Image 
+                src="/assets/logo-circle.png" 
+                alt="Esprit de Corps" 
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
             <div className="text-xl font-bold hidden sm:block">
               <span className="text-primary">Esprit</span>
               <span className="text-neutral-900"> de Corps</span>

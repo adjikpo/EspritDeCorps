@@ -17,9 +17,17 @@ export default function SAPBanner() {
                 </span>
               </div>
               
-              <h3 className="text-3xl font-bold text-neutral-900 mb-4">
-                Bénéficiez de 50% de réduction fiscale
-              </h3>
+              <div className="flex items-center gap-3 mb-4">
+                <h3 className="text-3xl font-bold text-neutral-900">
+                  Bénéficiez de 
+                </h3>
+                <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white font-bold text-2xl rounded-lg shadow-lg animate-pulse">
+                  -50%
+                </span>
+              </div>
+              <p className="text-lg text-neutral-700 font-medium mb-4">
+                de réduction fiscale
+              </p>
               
               <p className="text-neutral-600 leading-relaxed mb-6">
                 En tant que coach agréé <strong>Service à la Personne (SAP)</strong>, 
